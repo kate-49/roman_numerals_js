@@ -376,8 +376,15 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1"
   },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
+  },
   "scripts": {
-    "test": "jest"
+    "test": "jest --forceExit --coverage --no-cache"
   },
   "repository": {
     "type": "git",
