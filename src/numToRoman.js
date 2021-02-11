@@ -1,24 +1,33 @@
 
-
 class NumToRoman {
-
+  
   constructor() {
-    this.valuemap = {1: 'I', 5: 'V', 10: 'X', 50: 'L', 100: 'C', 500: 'D', 1000: 
-  'M'};
-    this.answer = [];
+    this.onesValuemap = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX']
+    this.tensValuemap = ['X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC']
+    this.hundredsValuemap = { 100: 'C', 500: 'D' }
+    this.answer = "";
   }
 
   run(number) {
-
     if (Number.isInteger(number) != true) {
-        throw new TypeError('Wrong input type');
+        throw new Error('Wrong input type');
+    }
+    
+    if (number > 9) {
+      var tens = Math.floor((number / 10))
+      var value = this.tensValuemap[tens-1]      
+      this.answer += value
+      number -= (tens * 10)
+    
+    }
+    
+    if (number) {
+      var value = this.onesValuemap[number-1]
+      this.answer += value
     }
 
-    var value = this.valuemap[number];
-    this.answer.push(value);
+    return (this.answer);
 
-    return this.answer.join(',');
   }
-
 }
 module.exports = NumToRoman;
