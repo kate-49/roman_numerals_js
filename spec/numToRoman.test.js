@@ -1,5 +1,7 @@
-const numToRoman = require('../src/numToRoman.js')
+const numToRoman = require('../src/numToRoman.js');
 
-test('accepts a number as input and returns a string', () => {
-  expect(numToRoman(10)).toBe('X')
-})
+test('returns x for 10', () => {
+  expect(numToRoman(10)).toBe("X");
+});
+
+

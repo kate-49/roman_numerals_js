@@ -1,5 +1,4 @@
-function numToRoman (number) {
-  return "X"
+function numToRoman(number) {
+  return "X";
 }
-
-module.exports = numToRoman
+module.exports = numToRoman;

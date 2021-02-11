@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "numToRomanSpec.js",
+   "jest": {
+    "verbose": true
+  },
   "dependencies": {
     "abab": "^2.0.5",
     "acorn": "^7.4.1",
@@ -374,17 +377,14 @@
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1"
+    "eslint-plugin-promise": "^4.2.1",
+    "nyc": "^15.1.0"
   },
-  "jest": {
-    "collectCoverage": true,
-    "coverageReporters": [
-      "json",
-      "html"
-    ]
-  },
+  
   "scripts": {
-    "test": "jest --forceExit --coverage --no-cache"
+    "test": "jest --forceExit --coverage --no-cache",
+    "lint-test": "yarn run eslint spec/numToRoman.test.js",
+    "lint-work": "yarn run eslint src/numToRoman.js"
   },
   "repository": {
     "type": "git",
