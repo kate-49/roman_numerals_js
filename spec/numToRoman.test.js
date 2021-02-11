@@ -7,14 +7,10 @@ describe('NumToRoman', function() {
     converter = new NumToRoman();
   });
 
-  it('can return a string when given an integer', function() {
-    expect(converter.run(10)).toEqual("X");
-  });
-  
-  it('will raise errors when not given correct input', function() {
-    expect(converter.run(10.00)).toThrow(new Error("Incorrect input type"));
-    expect(converter.run("test string")).toThrow(new Error("Incorrect input type"));
-    expect(converter.run(true)).toThrow(new Error("Incorrect input type"));
+  it('will only accept integer input', () => {
+    expect(() => {converter.run(10)}).not.toThrowError(TypeError('Wrong input type'))
+    expect(() => {converter.run("test string")}).toThrowError(TypeError('Wrong input type'))
+    expect(() => {converter.run(true)}).toThrowError(TypeError('Wrong input type'))
   });
 })
 

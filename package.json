@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "numToRomanSpec.js",
-   "jest": {
+  "jest": {
     "verbose": true
   },
   "dependencies": {
@@ -84,6 +84,7 @@
     "emoji-regex": "^8.0.0",
     "end-of-stream": "^1.4.4",
     "error-ex": "^1.3.2",
+    "error-handler-module": "^1.0.3",
     "escape-string-regexp": "^2.0.0",
     "escodegen": "^1.14.3",
     "esprima": "^4.0.1",
@@ -380,7 +381,6 @@
     "eslint-plugin-promise": "^4.2.1",
     "nyc": "^15.1.0"
   },
-  
   "scripts": {
     "test": "jest --forceExit --coverage --no-cache",
     "lint-test": "yarn run eslint spec/numToRoman.test.js",

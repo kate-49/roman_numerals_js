@@ -1,4 +1,5 @@
 
+
 class NumToRoman {
 
   constructor() {
@@ -7,12 +8,15 @@ class NumToRoman {
   }
 
   run(number) {
-  
+
+    if (Number.isInteger(number) != true) {
+        throw new TypeError('Wrong input type');
+    }
+
     var value = this.valuemap[number];
     this.answer.push(value);
 
-   return this.answer.join(',');
-   
+    return this.answer.join(',');
   }
 
 }
