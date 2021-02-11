@@ -34,7 +34,11 @@ describe('NumToRoman', function() {
     
     converter = new NumToRoman();
     expect(converter.run(1000)).toEqual("M")
-  })
+  });
+
+  it('can handle complex numbers', () => {
+    expect(converter.run(15)).toEqual("XV")
+  });
 
 })
 
