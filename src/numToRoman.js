@@ -8,10 +8,14 @@ class NumToRoman {
     this.answer = "";
   }
 
-  run(number) {
+  checkInputValid(number) {
     if (Number.isInteger(number) != true) {
-        throw new Error('Wrong input type');
-    }
+      throw new Error('Wrong input type');
+  }
+  }
+
+  run(number) {
+    this.checkInputValid(number)
 
     if (number > 99) {
       var hundreds = Math.floor((number/100))
