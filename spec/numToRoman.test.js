@@ -24,6 +24,18 @@ describe('NumToRoman', function() {
     
     converter = new NumToRoman();
     expect(converter.run(10)).toEqual("X")
+
+    converter = new NumToRoman();
+    expect(converter.run(10)).toEqual("L")
+
+    converter = new NumToRoman();
+    expect(converter.run(10)).toEqual("C")
+
+    converter = new NumToRoman();
+    expect(converter.run(10)).toEqual("D")
+
+    converter = new NumToRoman();
+    expect(converter.run(10)).toEqual("M")
         
   });
 
