@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/15.6.0/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js test
+  /usr/local/Cellar/node/15.6.0/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js lint-work
 
 PATH: 
   /usr/local/opt/ruby/bin:/Users/katesmith/.rbenv/shims:/Users/katesmith/Users/katesmith/Desktop/sirius/opg-sirius-user-management/pact/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/katesmith/Desktop/my_katas/roman_numerals_js/package.json: Unexpected token } in JSON at position 11019
+  SyntaxError: /Users/katesmith/Desktop/my_katas/roman_numerals_js/package.json: Unexpected token } in JSON at position 11312
       at JSON.parse (<anonymous>)
       at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -398,7 +398,7 @@ npm manifest:
       "eslint-config-standard": "^16.0.2",
       "eslint-plugin-import": "^2.22.1",
       "eslint-plugin-node": "^11.1.0",
-      "eslint-plugin-promise": "^4.2.1",
+      "eslint-plugin-promise": "^4.2.1"
     },
     "jest": {
       "collectCoverage": true,
@@ -408,7 +408,9 @@ npm manifest:
       ]
     },
     "scripts": {
-      "test": "jest --forceExit --coverage --no-cache"
+      "test": "jest --forceExit --coverage --no-cache",
+      "lint-test": "yarn run eslint spec/numToRoman.test.js",
+      "lint-work": "yarn run eslint src/numToRoman.js",
     },
     "repository": {
       "type": "git",
