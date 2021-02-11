@@ -39,6 +39,15 @@ describe('NumToRoman', function() {
   it('can handle complex numbers', () => {
     converter = new NumToRoman();
     expect(converter.run(15)).toEqual("XV")
+
+    converter = new NumToRoman();
+    expect(converter.run(159)).toEqual("CLIX")
+
+    converter = new NumToRoman();
+    expect(converter.run(890)).toEqual("DCCCXC")
+
+    converter = new NumToRoman();
+    expect(converter.run(101)).toEqual("CI")
   });
 
 })
