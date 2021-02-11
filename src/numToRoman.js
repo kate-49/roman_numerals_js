@@ -3,11 +3,13 @@
 class NumToRoman {
 
   constructor() {
-    this.valuemap = {10: 'X'};
+    this.valuemap = {1: 'I', 5: 'V', 10: 'X', 50: 'L', 100: 'C', 500: 'D', 1000: 
+  'M'};
     this.answer = [];
   }
 
   run(number) {
+    this.answer = [];
 
     if (Number.isInteger(number) != true) {
         throw new TypeError('Wrong input type');
