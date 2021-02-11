@@ -2,7 +2,7 @@
 class NumToRoman {
 
   constructor() {
-    this.valuemap = {1: 'I', 5: 'V', 10: 'X'};
+    this.valuemap = {10: 'X'};
     this.answer = [];
   }
 
