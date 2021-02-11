@@ -9,7 +9,6 @@ class NumToRoman {
   }
 
   run(number) {
-    this.answer = [];
 
     if (Number.isInteger(number) != true) {
         throw new TypeError('Wrong input type');
