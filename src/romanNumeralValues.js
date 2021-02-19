@@ -7,17 +7,28 @@ class RomanNumeralValues {
         this.hundredsValueMap = ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'];
     }
     
-    hundreds(number) {
-        return this.hundredsValueMap[number]
+    hundreds(input) {
+        if (Number.isInteger(input)){
+            return this.hundredsValueMap[input]
+        } else {
+            return this.hundredsValueMap.indexOf(input)
+        }
     }
 
-    tens(number) {
-        return this.tensValueMap[number]
+    tens(input) {
+        if (Number.isInteger(input)){
+            return this.tensValueMap[input]
+        } else {
+            return this.tensValueMap.indexOf(input)
+        }
     }
 
-    ones(number) {
-        return this.onesValueMap[number]
-        
+    ones(input) {
+        if (Number.isInteger(input)){
+            return this.onesValueMap[input]
+        } else {
+            return this.onesValueMap.indexOf(input)
+        }
     }
 
   };
