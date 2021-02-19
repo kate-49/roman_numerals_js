@@ -13,6 +13,9 @@ class NumToRoman {
     if (Number.isInteger(this.number) != true) {
       throw new Error('Wrong input type');
     }
+    if (this.number >= 1000) {
+      throw new Error('Input too large, input must be less than 1000')
+    }
   }
 
   checkHundreds() {
