@@ -2,11 +2,29 @@ const NumToRoman = require('../src/numToRoman.js');
 
 describe('checkTens', function() {
 
-  it('will return the correct value for main types of number when given seperatley', () => {
-    converter = new NumToRoman(1);
-    expect(converter.run()).toEqual("I")
+  it('will add appropriate value to valuemap and leave accurate remainer', () => {
     
-    converter = new NumToRoman(5);
-    expect(converter.run()).toEqual("V")
+    converter = new NumToRoman(11);
+    converter.checkTens()
+    expect(converter.answer).toEqual("X")
+    expect(converter.number).toEqual(1)
+
+    converter = new NumToRoman(49);
+    converter.checkTens()
+    expect(converter.answer).toEqual("XL")
+    expect(converter.number).toEqual(9)
+
+    converter = new NumToRoman(56);
+    converter.checkTens()
+    expect(converter.answer).toEqual("L")
+    expect(converter.number).toEqual(6)
+
+    converter = new NumToRoman(99);
+    converter.checkTens()
+    expect(converter.answer).toEqual("XC")
+    expect(converter.number).toEqual(9)
+
     });
+
+   
 });
