@@ -1,12 +1,11 @@
+const RomanNumeralValues = require('./romanNumeralValues.js');
 
 class NumToRoman {
   
   constructor(number) {
-    this.number = number;
-    this.onesValuemap = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX']
-    this.tensValuemap = ['X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC']
-    this.hundredsValuemap = ['C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM']
+    this.number = number
     this.answer = "";
+    this.romanNumeralValues = new RomanNumeralValues();
   }
 
   checkInputValid() {
@@ -19,21 +18,21 @@ class NumToRoman {
   }
 
   checkHundreds() {
-    var hundreds = Math.floor((this.number/100))
-    var value = this.hundredsValuemap[hundreds-1]
+    var hundreds = (Math.floor((this.number/100)))
+    var value = this.romanNumeralValues.hundreds(hundreds)
     this.answer += value
     this.number -= (hundreds * 100)
   }
 
   checkTens() {
-    var tens = Math.floor((this.number / 10))
-    var value = this.tensValuemap[tens-1]      
+    var tens = (Math.floor((this.number / 10)))
+    var value = this.romanNumeralValues.tens(tens)
     this.answer += value
     this.number -= (tens * 10)
   }
   
   checkOnes() {
-    var value = this.onesValuemap[this.number-1]
+    var value = this.romanNumeralValues.ones(this.number)
     this.answer += value
     this.number -= value
   }

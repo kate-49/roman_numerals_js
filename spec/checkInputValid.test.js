@@ -20,4 +20,5 @@ describe('checkInputValid', function() {
         converter = new NumToRoman(3651);
         expect(() => {converter.checkInputValid()}).toThrowError(Error('Input too large, input must be less than 1000'))
       });
+      
 });

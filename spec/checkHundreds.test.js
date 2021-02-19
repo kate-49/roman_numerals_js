@@ -17,6 +17,8 @@ describe('checkHundreds', function() {
     converter = new NumToRoman(900);
     converter.checkHundreds()
     expect(converter.answer).toEqual("CM")
+    
     expect(converter.number).toEqual(0)
+    
   });
 })

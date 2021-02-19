@@ -6,14 +6,12 @@ describe('Check whole program runs', function() {
     converter = new NumToRoman(5);
     expect(converter.run()).toEqual("V")
 
-    converter = new NumToRoman(159);
-    expect(converter.run()).toEqual("CLIX")
+    converter = new NumToRoman(10);
+    expect(converter.run()).toEqual("X")
 
-    converter = new NumToRoman(890);
-    expect(converter.run()).toEqual("DCCCXC")
+    converter = new NumToRoman(100);
+    expect(converter.run()).toEqual("C")
 
-    converter = new NumToRoman(101);
-    expect(converter.run()).toEqual("CI")
   });
 
   it('will only accept integer input', () => {

@@ -7,7 +7,9 @@ describe('checkTens', function() {
     converter = new NumToRoman(10);
     converter.checkTens()
     expect(converter.answer).toEqual("X")
+    
     expect(converter.number).toEqual(0)
+    
 
     converter = new NumToRoman(49);
     converter.checkTens()
@@ -23,7 +25,7 @@ describe('checkTens', function() {
     converter.checkTens()
     expect(converter.answer).toEqual("XC")
     expect(converter.number).toEqual(9)
-
+    
     });
 
    
