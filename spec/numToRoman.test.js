@@ -1,6 +1,6 @@
 const NumToRoman = require('../src/numToRoman.js');
 
-describe('NumToRoman', function() {
+describe('Check whole program runs', function() {
   
   it('can handle complex numbers', () => {
     converter = new NumToRoman(5);
@@ -34,7 +34,7 @@ describe('NumToRoman', function() {
     converter = new NumToRoman(5432);
     expect(() => {converter.run()}).toThrowError(Error('Input too large, input must be less than 1000'))
   });
-  
+
 })
 
 
