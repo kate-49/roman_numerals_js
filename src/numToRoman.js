@@ -32,6 +32,10 @@ class NumToRoman {
     this.number -= (tens * 10)
   }
   
+  checkOnes() {
+    var value = this.onesValuemap[this.number-1]
+    this.answer += value
+  }
 
   run() {
     this.checkInputValid()
@@ -45,8 +49,7 @@ class NumToRoman {
     }
     
     if (this.number) {
-      var value = this.onesValuemap[this.number-1]
-      this.answer += value
+      this.checkOnes()
     }
 
     return (this.answer);
