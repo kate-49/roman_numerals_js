@@ -35,6 +35,7 @@ class NumToRoman {
   checkOnes() {
     var value = this.onesValuemap[this.number-1]
     this.answer += value
+    this.number -= value
   }
 
   run() {
@@ -51,7 +52,7 @@ class NumToRoman {
     if (this.number) {
       this.checkOnes()
     }
-
+    
     return (this.answer);
 
   }
