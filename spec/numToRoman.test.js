@@ -14,6 +14,14 @@ describe('NumToRoman', function() {
     expect(() => {converter.run()}).toThrowError(Error('Wrong input type'))
   });
 
+  it('will not accept integers that are too large', () => {
+    converter = new NumToRoman(1000);
+    expect(() => {converter.run()}).toThrowError(Error('Input too large, input must be less than 1000'))
+
+    converter = new NumToRoman(3651);
+    expect(() => {converter.run()}).toThrowError(Error('Input too large, input must be less than 1000'))
+  });
+
   it('will return the correct value for main types of number when given seperatley', () => {
    
     converter = new NumToRoman(1);
