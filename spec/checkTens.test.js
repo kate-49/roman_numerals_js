@@ -2,12 +2,12 @@ const NumToRoman = require('../src/numToRoman.js');
 
 describe('checkTens', function() {
 
-  it('will add appropriate value to valuemap and leave accurate remainer', () => {
+  it('will accuratley map input and leave accurate remainder', () => {
     
-    converter = new NumToRoman(11);
+    converter = new NumToRoman(10);
     converter.checkTens()
     expect(converter.answer).toEqual("X")
-    expect(converter.number).toEqual(1)
+    expect(converter.number).toEqual(0)
 
     converter = new NumToRoman(49);
     converter.checkTens()

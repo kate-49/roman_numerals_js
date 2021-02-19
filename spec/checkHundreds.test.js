@@ -2,7 +2,7 @@ const NumToRoman = require('../src/numToRoman.js');
 
 describe('checkHundreds', function() {
 
-  it('will map input according to valuemap and add this to answer', () => {
+  it('will accuratley map input and leave accurate remainder', () => {
    
     converter = new NumToRoman(161);
     converter.checkHundreds()
