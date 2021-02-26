@@ -9,9 +9,11 @@ class RomanNumeralValues {
     
     hundreds(input) {
         if (Number.isInteger(input)){
+            input = input/100
             return this.hundredsValueMap[input]
         } else {
-            return this.hundredsValueMap.indexOf(input)
+            var index = this.hundredsValueMap.indexOf(input)
+            return (index * 100)
         }
     }
 
