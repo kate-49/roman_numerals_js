@@ -17,6 +17,7 @@ class RomanNumeralValues {
 
     tens(input) {
         if (Number.isInteger(input)){
+            input = input/10
             return this.tensValueMap[input]
         } else {
             var index = this.tensValueMap.indexOf(input)
