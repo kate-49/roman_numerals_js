@@ -18,10 +18,10 @@ class NumToRoman {
   }
 
   checkHundreds() {
-    var hundreds = (Math.floor((this.number/100)))
+    var hundreds = (Math.floor(this.number/100) * 100)
     var value = this.romanNumeralValues.hundreds(hundreds)
     this.answer += value
-    this.number -= (hundreds * 100)
+    this.number -= hundreds
   }
 
   checkTens() {
