@@ -19,7 +19,8 @@ class RomanNumeralValues {
         if (Number.isInteger(input)){
             return this.tensValueMap[input]
         } else {
-            return (this.tensValueMap.indexOf(input)) * 10
+            var index = this.tensValueMap.indexOf(input)
+            return (index * 10)
         }
     }
 
