@@ -16,9 +16,11 @@ describe('Check whole program runs', function() {
       // });
 
       it('exchanges tens accurately', () => {
+        expect(numerals.tens("X")).toEqual(10)
         expect(numerals.tens("XXX")).toEqual(30)
         expect(numerals.tens("XL")).toEqual(40)
         expect(numerals.tens("LX")).toEqual(60)
+        expect(numerals.tens(10)).toEqual("X")
         expect(numerals.tens(30)).toEqual("XXX")
         expect(numerals.tens(40)).toEqual("XL")
         expect(numerals.tens(60)).toEqual("LX")

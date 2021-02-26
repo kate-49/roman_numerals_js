@@ -25,10 +25,10 @@ class NumToRoman {
   }
 
   checkTens() {
-    var tens = (Math.floor((this.number / 10)))
+    var tens = (Math.floor(this.number))
     var value = this.romanNumeralValues.tens(tens)
     this.answer += value
-    this.number -= (tens * 10)
+    this.number -= tens
   }
   
   checkOnes() {
