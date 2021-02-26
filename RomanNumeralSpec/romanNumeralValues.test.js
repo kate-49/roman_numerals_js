@@ -6,14 +6,14 @@ describe('Check whole program runs', function() {
       numerals = new RomanNumeralValues();
     });
     
-      // it('exchanges hundreds accurately', () => {
-      //   expect(numerals.hundreds("CD")).toEqual(4)
-      //   expect(numerals.hundreds("DCC")).toEqual(7)
-      //   expect(numerals.hundreds("CM")).toEqual(900)
-      //   expect(numerals.hundreds(400)).toEqual("CD")
-      //   expect(numerals.hundreds(700)).toEqual("DCC")
-      //   expect(numerals.hundreds(900)).toEqual("CM")
-      // });
+      it('exchanges hundreds accurately', () => {
+        expect(numerals.hundreds("CD")).toEqual(400)
+        expect(numerals.hundreds("DCC")).toEqual(700)
+        expect(numerals.hundreds("CM")).toEqual(900)
+        expect(numerals.hundreds(400)).toEqual("CD")
+        expect(numerals.hundreds(700)).toEqual("DCC")
+        expect(numerals.hundreds(900)).toEqual("CM")
+      });
 
       it('exchanges tens accurately', () => {
         expect(numerals.tens("X")).toEqual(10)
